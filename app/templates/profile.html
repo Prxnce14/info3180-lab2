@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+<div class = "firstclass">
+    <div class = "top">
+        <img src="{{ url_for('static', filename='prof.jpg' )}}" alt="Memoji of Nicholas Joiles"/>
+        <div >
+            <h1> {{name}}</h1>
+            <p> {{alias}} </p>
+            <p>{{location}} </p> 
+            <p> {{date}} </p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="bio">  
+        <p id = "mybio"> {{biography}} </p>
+        <div class="box_container" >
+            <div class =  post_section >
+                <h2> {{post_val}} </h2>
+                <p> Posts</p>
+            </div>
+            <div class =  foll_section >
+                <h2> {{foll_val}} </h2>
+                <p> Following</p>
+            </div>
+            <div class =  Followers_section >
+                <h2> {{fng_val}} </h2>
+                <p> Followers</p>
+            </div>
+        </div>
+
+        <button type = "button", id="btn"> Follow</button>
+    
+    </div>
+
+</div>
+{% endblock %}

@@ -1,10 +1,28 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
 
 
 ###
 # Routing for your application.
 ###
+
+#Global Variables
+
+
+location = 'Kingston, Jamaica'
+bio = """My name is Nicholas Joiles. A third year Com Sci major student with a big heart willing to contribute towards positive change 
+I am the President of UWI Mona Circle k, a student-led service organization in the Caribbean District 
+Our tenets, Service, leadership, and fellowship are exercised with every initiative we take on. Live to serve. Loooove to serve"""
+posts_val = "40 "
+foll_val = "90 "
+fng_val = "140 "
+
+def format_date_joined(yyyy,m,d):
+    date_joined = datetime.date(yyyy, m, d) 
+    return("Joined " + date_joined.strftime("%B, %Y"))
+
+date = format_date_joined(2024, 2, 18)
 
 @app.route('/')
 def home():
@@ -15,7 +33,18 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name = 'Nicholas Joiles')
+
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', name = 'Nicholas Joiles', alias = 'github: @Prxnce14', location = 'Kingston, Jamaica' 
+                           , biography = ' My name is Nicholas Joiles. A third year Com Sci major student with a big heart willing to contribute towards positive change.\
+                                    I am the President of UWI Mona Circle k, a student-led service organization in the Caribbean District.  \
+                                    Our tenets, service, leadership, and fellowship are exercised with every initiative we take on. Live to serve. Loooove to serve', 
+                                    date = format_date_joined(2024, 2, 18), post_val = "40 ", foll_val = "90 ", fng_val = "140 ")
+
+
 
 
 ###

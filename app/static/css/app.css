@@ -1,3 +1,66 @@
-body {
-    padding-top: 5rem;
+#btn
+{
+    background-color: #0d6efd;
 }
+
+#mybio
+{
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* This centers the content horizontally */
+    text-align: justify; /* This justifies the text evenly */
+
+}
+
+
+.box_container 
+{
+    display: flex;
+    margin-bottom: 30px; /* Adjust spacing between the boxes and the button */
+ }
+ 
+ .post_section, .foll_section, .Followers_section 
+ {
+    flex: 1;
+    /*margin-right: 0px; /* Adjust spacing between boxes */
+    padding: 30px; /* Adjust padding within each box */
+ }
+ 
+ .Followers_section
+ {
+    margin-right: 0; /* Remove right margin for the last box */
+ }
+
+
+ .divider 
+ {
+    border: 4px solid #0d6efd; /* Adjust the color and thickness of the divider */
+    margin: 20px 0; /* Adjust spacing above and below the divider */
+}
+
+
+
+
+body 
+{   
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    padding-top: 5rem;
+    background-color: lightslategrey;
+    text-align:center;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+
+img
+{ 
+
+display: block;
+margin: 0 auto;border-radius: 50%; /* This makes the image circular */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+width:20%
+}
+
+
+
